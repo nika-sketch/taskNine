@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/enterFragment">
+
+    <fragment
+        android:id="@+id/enterFragment"
+        android:name="ge.nlatsabidze.tasknine.EnterFragment"
+        android:label="fragment_enter"
+        tools:layout="@layout/fragment_enter" >
+        <action
+            android:id="@+id/action_enterFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_enterFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="ge.nlatsabidze.tasknine.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_secondRegisterFragment"
+            app:destination="@id/secondRegisterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/secondRegisterFragment"
+        android:name="ge.nlatsabidze.tasknine.SecondRegisterFragment"
+        android:label="fragment_second_register"
+        tools:layout="@layout/fragment_second_register"/>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="ge.nlatsabidze.tasknine.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login"/>
+
+</navigation>
